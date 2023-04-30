@@ -1,6 +1,7 @@
 package js;
 
 import js.neutralino.Debug;
+import js.neutralino.Extensions;
 import js.neutralino.Storage;
 import js.neutralino.Updater;
 
@@ -10,6 +11,9 @@ extern class Neutralino {
 
 	/** The debugging utility. **/
 	static final debug: Debug;
+
+	/** The extension manager. **/
+	static final extensions: Extensions;
 
 	/** The shared key-value storage. **/
 	static final storage: Storage;
