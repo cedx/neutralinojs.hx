@@ -49,6 +49,9 @@ extern class Global {
 	/** The source of application resources. **/
 	static final NL_RESMODE: ResourceMode;
 
+	/** The basic authentication token. */
+	static final NL_TOKEN: String;
+
 	/** The Neutralinojs framework version. **/
 	static final NL_VERSION: String;
 }
