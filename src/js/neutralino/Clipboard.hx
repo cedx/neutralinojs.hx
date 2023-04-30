@@ -2,7 +2,12 @@ package js.neutralino;
 
 import js.lib.Promise;
 
-/** TODO **/
+/** Provides access to the system clipboard. **/
 extern class Clipboard {
-	// TODO
+
+	/** Reads text from the system clipboard. **/
+	function readText(key: String, data: String): Promise<Void>;
+
+	/** Writes text into the system clipboard. **/
+	function writeText(data: String): Promise<String>;
 }
