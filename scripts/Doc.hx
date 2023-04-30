@@ -16,10 +16,12 @@ function main() {
 		"--define", "themeColor", "0xea8220",
 		"--define", "version", Version.packageVersion,
 		"--define", "website", "https://docs.belin.io/neutralinojs.hx",
+		"--include", "js\\.Neutralino",
+		"--include", "js\\.neutralino\\.*",
 		"--input-path", "var",
 		"--output-path", "docs/api",
 		"--title", "Haxe Externs for Neutralinojs",
-		"--toplevel-package", "js.neutralino"
+		"--toplevel-package", "js"
 	]);
 
 	File.copy("docs/favicon.ico", "docs/api/favicon.ico");

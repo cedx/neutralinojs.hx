@@ -1,0 +1,21 @@
+--class-path src
+--define analyzer-optimize
+--define js-es=6
+--define js-global=window
+--js var/build.js
+
+js.Neutralino
+js.neutralino.App
+js.neutralino.Clipboard
+js.neutralino.Computer
+js.neutralino.Custom
+js.neutralino.Debug
+js.neutralino.ErrorCode
+js.neutralino.Events
+js.neutralino.Extensions
+js.neutralino.FileSystem
+js.neutralino.Global
+js.neutralino.Os
+js.neutralino.Storage
+js.neutralino.Updater
+js.neutralino.Window
