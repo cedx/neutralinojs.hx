@@ -1,6 +1,7 @@
 package js;
 
 import js.neutralino.Debug;
+import js.neutralino.Storage;
 import js.neutralino.Updater;
 
 /** The top-level Neutralinojs object. **/
@@ -10,7 +11,10 @@ extern class Neutralino {
 	/** The debugging utility. **/
 	static final debug: Debug;
 
-	/** The built-in automatic updater. **/
+	/** The shared key-value storage. **/
+	static final storage: Storage;
+
+	/** The automatic updater. **/
 	static final updater: Updater;
 
 	/** Initializes the client library. **/

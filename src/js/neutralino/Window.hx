@@ -3,6 +3,5 @@ package js.neutralino;
 import js.lib.Promise;
 
 /** TODO **/
-extern class Extensions {
-	// TODO
+extern class Window {
 }

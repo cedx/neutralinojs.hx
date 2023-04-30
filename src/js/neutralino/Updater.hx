@@ -2,7 +2,7 @@ package js.neutralino;
 
 import js.lib.Promise;
 
-/** The built-in automatic updater. **/
+/** Provides methods related to built-in automatic updater. **/
 extern class Updater {
 
 	/** Checks the latest updates from the given URL. **/

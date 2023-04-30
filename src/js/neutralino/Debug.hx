@@ -2,8 +2,7 @@ package js.neutralino;
 
 import js.lib.Promise;
 
-/** Provides debugging utilities. **/
-@:native("Neutralino.debug")
+/** Provides application debugging utilities. **/
 extern class Debug {
 
 	/** Writes a message to `neutralinojs.log` file and/or standard output streams. **/
