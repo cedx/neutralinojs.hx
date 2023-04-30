@@ -1,5 +1,7 @@
 package js.neutralino;
 
+import js.lib.Promise;
+
 /** TODO **/
 @:native("Neutralino.os")
 extern class Os {

@@ -1,10 +1,14 @@
 package js;
 
+import js.neutralino.Debug;
 import js.neutralino.Updater;
 
 /** The top-level Neutralinojs object. **/
 @:native("Neutralino")
 extern class Neutralino {
+
+	/** The debugging utility. **/
+	static final debug: Debug;
 
 	/** The built-in automatic updater. **/
 	static final updater: Updater;
