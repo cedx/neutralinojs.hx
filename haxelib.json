@@ -3,7 +3,7 @@
 	"contributors": ["cedx"],
 	"description": "Extern definitions for Neutralinojs.",
 	"license": "MIT",
-	"name": "nwjs",
+	"name": "neutralinojs",
 	"releasenote": "Initial release.",
 	"tags": ["desktop", "extern", "js", "neutralinojs", "web"],
 	"url": "https://docs.belin.io/neutralinojs.hx",
