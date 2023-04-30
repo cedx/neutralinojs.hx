@@ -1,0 +1,11 @@
+{
+	"classPath": "src/",
+	"contributors": ["cedx"],
+	"description": "Extern definitions for Neutralinojs.",
+	"license": "MIT",
+	"name": "nwjs",
+	"releasenote": "Initial release.",
+	"tags": ["desktop", "extern", "js", "neutralinojs", "web"],
+	"url": "https://docs.belin.io/neutralinojs.hx",
+	"version": "1.0.0"
+}
