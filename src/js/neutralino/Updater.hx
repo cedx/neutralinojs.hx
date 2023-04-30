@@ -6,14 +6,14 @@ import js.lib.Promise;
 extern class Updater {
 
 	/** Checks the latest updates from the given URL. **/
-	function checkForUpdates(url: String): Promise<UpdateManifest>;
+	function checkForUpdates(url: String): Promise<Manifest>;
 
 	/** Installs updates from the downloaded update manifest. **/
 	function install(): Promise<Void>;
 }
 
 /** Represents an update manifest. **/
-typedef UpdateManifest = {
+typedef Manifest = {
 
 	/** The application identifier. **/
 	final applicationId: String;

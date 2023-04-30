@@ -28,27 +28,27 @@ extern class FileSystem {
 /*
 
 typedef DirectoryEntry = {
-	entry: String;
-	type: String;
+	final entry: String;
+	final type: String;
 }
 
 typedef FileReaderOptions = {
-	pos: number;
-	size: number;
+	var ?pos: number;
+	var ?size: number;
 }
 
 typedef OpenedFile = {
-	eof: Bool;
-	id: number;
-	lastRead: number;
-	pos: number;
+	final eof: Bool;
+	final id: number;
+	final lastRead: number;
+	final pos: number;
 }
 
 typedef Stats = {
-	createdAt: number;
-	isDirectory: Bool;
-	isFile: Bool;
-	modifiedAt: number;
-	size: number;
+	final createdAt: number;
+	final isDirectory: Bool;
+	final isFile: Bool;
+	final modifiedAt: number;
+	final size: number;
 }
 */
