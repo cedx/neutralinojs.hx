@@ -1,5 +1,6 @@
 package js.neutralino;
 
+import haxe.DynamicAccess;
 import js.lib.Promise;
 
 /** Prvides methods related to the current application instance. **/
@@ -12,7 +13,7 @@ extern class App {
 	function exit(?code: Int): Promise<Void>;
 
 	/** Returns the current application configuration as a JSON object. **/
-	function getConfig(): Promise<Dynamic>;
+	function getConfig(): Promise<DynamicAccess<Dynamic>>;
 
 	/** Kills the application process. **/
 	function killProcess(): Promise<Void>;

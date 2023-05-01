@@ -2,6 +2,7 @@ package js;
 
 import js.neutralino.App;
 import js.neutralino.Clipboard;
+import js.neutralino.Computer;
 import js.neutralino.Custom;
 import js.neutralino.Debug;
 import js.neutralino.Extensions;
@@ -17,6 +18,9 @@ extern class Neutralino {
 
 	/** The system clipboard. **/
 	static final clipboard: Clipboard;
+
+	/** Information about the user's hardware. **/
+	static final computer: Computer;
 
 	/** The extensions API. **/
 	static final custom: Custom;
