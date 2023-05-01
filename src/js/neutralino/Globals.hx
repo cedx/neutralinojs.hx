@@ -1,7 +1,7 @@
 package js.neutralino;
 
 /** Provides global variables. **/
-@:native("")
+@:native("window")
 extern class Globals {
 
 	/** The application identifier. **/
@@ -76,13 +76,13 @@ enum abstract AppMode(String) to String {
 enum abstract OsName(String) to String {
 
 	/** The operating system is macOS. **/
-	var Darwin = "Darwin";
+	var Darwin;
 
 	/** The operating system is Linux. **/
-	var Linux = "Linux";
+	var Linux;
 
 	/** The operating system is Windows. **/
-	var Windows = "Windows";
+	var Windows;
 }
 
 /** The loading mode of application resources. **/

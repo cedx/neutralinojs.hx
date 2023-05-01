@@ -104,13 +104,13 @@ typedef KernelInfo = {
 enum abstract KernelType(String) to String {
 
 	/** The kernel is Darwin. **/
-	var Darwin = "Darwin";
+	var Darwin;
 
 	/** The kernel is Linux. **/
-	var Linux = "Linux";
+	var Linux;
 
 	/** The kernel is unknown. **/
-	var Unknown = "Unknown";
+	var Unknown;
 
 	/** The kernel is Windows NT. **/
 	var WindowsNT = "Windows NT";
