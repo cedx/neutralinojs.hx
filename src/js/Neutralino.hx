@@ -7,9 +7,11 @@ import js.neutralino.Custom;
 import js.neutralino.Debug;
 import js.neutralino.Events;
 import js.neutralino.Extensions;
+import js.neutralino.FileSystem;
 import js.neutralino.Os;
 import js.neutralino.Storage;
 import js.neutralino.Updater;
+import js.neutralino.Window;
 
 /** The top-level Neutralinojs object. **/
 @:native("Neutralino")
@@ -36,6 +38,9 @@ extern class Neutralino {
 	/** The extension manager. **/
 	static final extensions: Extensions;
 
+	/** The file system manager. **/
+	static final filesystem: FileSystem;
+
 	/** Access to the user's operating system. **/
 	static final os: Os;
 
@@ -44,6 +49,9 @@ extern class Neutralino {
 
 	/** The automatic updater. **/
 	static final updater: Updater;
+
+	/** The native window manager. **/
+	static final window: Window;
 
 	/** Initializes the client library. **/
 	static function init(?options: InitOptions): Void;

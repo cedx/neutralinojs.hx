@@ -7,7 +7,7 @@ import js.lib.Promise;
 extern class Os {
 
 	/** Executes a command and returns the output. **/
-	function execCommand(command: String, ?options: ExecCommandOptions): Promise<ExecCommandResult>;
+	function execCommand(command: String, ?options: ExecOptions): Promise<Process>;
 
 	/** Provides the value of the specified environment variable. **/
 	function getEnv(key: String): Promise<String>;
@@ -50,29 +50,13 @@ extern class Os {
 }
 
 /** The options of the `Os.execCommand()` method. **/
-typedef ExecCommandOptions = {
+typedef ExecOptions = {
 
 	/** Value indicating whether to execute the command in background. **/
 	var ?background: Bool;
 
 	/** The standard input as a string. **/
 	var ?stdIn: String;
-}
-
-/** The result of the `Os.execCommand()` method. **/
-typedef ExecCommandResult = {
-
-	/** The exit code of the process. **/
-	final exitCode: Int;
-
-	/** The process identifier. **/
-	final pid: Int;
-
-	/** The standard error. **/
-	final stdErr: String;
-
-	/** The standard output. **/
-	final stdOut: String;
 }
 
 /** Filters a file list. **/
@@ -175,6 +159,22 @@ typedef OpenDialogOptions = {
 
 	/** Value indicating whether to enable multi selections. **/
 	var ?multiSelections: Bool;
+}
+
+/** TODO Information about a process. **/
+typedef Process = {
+
+	/** The exit code of the process. **/
+	final exitCode: Int;
+
+	/** The process identifier. **/
+	final pid: Int;
+
+	/** The standard error. **/
+	final stdErr: String;
+
+	/** The standard output. **/
+	final stdOut: String;
 }
 
 /** The options of the `Os.showSaveDialog()` method. **/
