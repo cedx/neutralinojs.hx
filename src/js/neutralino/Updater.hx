@@ -12,7 +12,7 @@ extern class Updater {
 	function install(): Promise<Void>;
 }
 
-/** Represents an update manifest. **/
+/** An update manifest. **/
 typedef Manifest = {
 
 	/** The application identifier. **/

@@ -22,23 +22,7 @@ extern class App {
 	function restartProcess(?options: RestartOptions): Promise<Void>;
 }
 
-/** The application mode. **/
-enum abstract AppMode(String) to String {
-
-	/** Uses the user's default browser to load the application. **/
-	var Browser = "browser";
-
-	/** Runs as a Chrome application. **/
-	var Chrome = "chrome";
-
-	/** Runs as a background server. **/
-	var Cloud = "cloud";
-
-	/** Runs on a native window. **/
-	var Window = "window";
-}
-
-/** Defines the options of the `App.restartProcess()` method. **/
+/** The options of the `App.restartProcess()` method. **/
 typedef RestartOptions = {
 
 	/** The additional command-line arguments. **/

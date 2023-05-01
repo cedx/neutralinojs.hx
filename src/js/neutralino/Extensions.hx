@@ -15,7 +15,7 @@ extern class Extensions {
 	function getStats(): Promise<ExtensionStats>;
 }
 
-/** Provides details about connected and loaded extensions. **/
+/** Details about connected and loaded extensions. **/
 typedef ExtensionStats = {
 
 	/** The list of connected extensions. **/

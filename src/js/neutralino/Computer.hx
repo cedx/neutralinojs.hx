@@ -27,23 +27,33 @@ extern class Computer {
 	function getOSInfo(): Promise<OsInfo>;
 }
 
-/** Defines the processor architecture. **/
+/** The processor architecture. **/
 enum abstract CpuArchitecture(String) to String {
+
+	/** The processor architecture is ARM. **/
 	var Arm = "arm";
-	var IA32 = "ia32";
+
+	/** The processor architecture is IA-32 (32-bit x86). **/
+	var Ia32 = "ia32";
+
+	/** The processor architecture is IA-64 (Itanium). **/
 	var Itanium = "itanium";
+
+	/** The processor architecture is unknown. **/
 	var Unknown = "unknown";
+
+	/** The processor architecture is x64 (64-bit x86 or ARM64). **/
 	var X64 = "x64";
 }
 
-/** Provides the CPU information. **/
+/** The CPU information. **/
 typedef CpuInfo = {
 
 	/** The CPU architecture name. **/
 	final architecture: CpuArchitecture;
 
 	/** The current CPU frequency in hertz (Hz). **/
-	final frequency: Float; // TODO: Int or Float
+	final frequency: Int;
 
 	/** The number of logical threads in the parallelism model. **/
 	final logicalThreads: Int;
@@ -61,7 +71,7 @@ typedef CpuInfo = {
 	final vendor: String;
 }
 
-/** Provides information about a connected display. **/
+/** Information about a connected display. **/
 typedef Display = {
 
 	/** The BPP (Bits Per Pixel) value. **/
@@ -74,27 +84,39 @@ typedef Display = {
 	final id: Int;
 
 	/** The refresh rate in hertz (Hz). **/
-	final refreshRate: Int; // TODO: Int or Float
+	final refreshRate: Int;
 
 	/** The display resolution information. **/
 	final resolution: Resolution;
 }
 
-/** Provides operating system kernel information. **/
+/** Operating system kernel information. **/
 typedef KernelInfo = {
+
+	/** The kernel type. **/
 	final variant: KernelType;
+
+	/** The kernel version. **/
 	final version: String;
 }
 
-/** Defines the kernel type. **/
+/** The kernel type. **/
 enum abstract KernelType(String) to String {
+
+	/** The kernel is Darwin. **/
 	var Darwin = "Darwin";
+
+	/** The kernel is Linux. **/
 	var Linux = "Linux";
+
+	/** The kernel is unknown. **/
 	var Unknown = "Unknown";
+
+	/** The kernel is Windows NT. **/
 	var WindowsNT = "Windows NT";
 }
 
-/** Provides system memory statistics. **/
+/** System memory statistics. **/
 typedef MemoryInfo = {
 
 	/** The available memory. **/
@@ -104,7 +126,7 @@ typedef MemoryInfo = {
 	final total: Int;
 }
 
-/** Provides the coordinates of the mouse cursor. **/
+/** The coordinates of the mouse cursor. **/
 typedef MousePosition = {
 
 	/** The distance from the left edge of the screen in pixels. **/
@@ -114,7 +136,7 @@ typedef MousePosition = {
 	final y: Int;
 }
 
-/** Provides operating system information. **/
+/** Operating system information. **/
 typedef OsInfo = {
 
 	/** The operating system description. **/
@@ -127,7 +149,7 @@ typedef OsInfo = {
 	final version: String;
 }
 
-/** Provides the display resolution. **/
+/** The display resolution. **/
 typedef Resolution = {
 
 	/** The display height. **/

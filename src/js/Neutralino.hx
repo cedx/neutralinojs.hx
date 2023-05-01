@@ -7,6 +7,7 @@ import js.neutralino.Custom;
 import js.neutralino.Debug;
 import js.neutralino.Events;
 import js.neutralino.Extensions;
+import js.neutralino.Os;
 import js.neutralino.Storage;
 import js.neutralino.Updater;
 
@@ -20,7 +21,7 @@ extern class Neutralino {
 	/** The system clipboard. **/
 	static final clipboard: Clipboard;
 
-	/** Information about the user's hardware. **/
+	/** Access to the user's hardware. **/
 	static final computer: Computer;
 
 	/** The custom methods added by the application developer. **/
@@ -35,6 +36,9 @@ extern class Neutralino {
 	/** The extension manager. **/
 	static final extensions: Extensions;
 
+	/** Access to the user's operating system. **/
+	static final os: Os;
+
 	/** The shared key-value storage. **/
 	static final storage: Storage;
 
@@ -45,7 +49,7 @@ extern class Neutralino {
 	static function init(?options: InitOptions): Void;
 }
 
-/** Defines the options of the `Neutralino.init()` method. **/
+/** The options of the `Neutralino.init()` method. **/
 typedef InitOptions = {
 
 	/** Value indicating whether to export the custom methods. **/

@@ -1,7 +1,6 @@
 package js.neutralino;
 
 import js.neutralino.App.AppMode;
-import js.neutralino.Os.OsName;
 
 /** Provides global variables. **/
 @:native("")
@@ -59,7 +58,36 @@ extern class Global {
 	static final NL_VERSION: String;
 }
 
-/** Defines the loading mode of application resources. **/
+/** The application mode. **/
+enum abstract AppMode(String) to String {
+
+	/** Uses the user's default browser to load the application. **/
+	var Browser = "browser";
+
+	/** Runs as a Chrome application. **/
+	var Chrome = "chrome";
+
+	/** Runs as a background server. **/
+	var Cloud = "cloud";
+
+	/** Runs on a native window. **/
+	var Window = "window";
+}
+
+/** The operating system names. **/
+enum abstract OsName(String) to String {
+
+	/** The operating system is macOS. **/
+	var Darwin = "Darwin";
+
+	/** The operating system is Linux. **/
+	var Linux = "Linux";
+
+	/** The operating system is Windows. **/
+	var Windows = "Windows";
+}
+
+/** The loading mode of application resources. **/
 enum abstract ResourceMode(String) to String {
 
 	/** The resources are loaded from a bundle. **/

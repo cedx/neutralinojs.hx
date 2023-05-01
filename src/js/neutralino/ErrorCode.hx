@@ -33,29 +33,34 @@ enum abstract ErrorCode(String) to String {
 	// NE_UP_UPDINER	Update installation error	updater.install
 	// NE_UP_UPDNOUF	No update manifest loaded	updater.install
 
-/*
-"NE_CL_NSEROFF";
-"NE_EX_EXTNOTC";
-"NE_FS_COPYFER";
-"NE_FS_DIRCRER";
-"NE_FS_FILRDER";
-"NE_FS_FILRMER";
-"NE_FS_FILWRER";
-"NE_FS_MOVEFER";
-"NE_FS_NOPATHE";
-"NE_FS_RMDIRER";
-"NE_OS_INVKNPT";
-"NE_OS_INVMSGA";
-"NE_RT_APIPRME";
-"NE_RT_INVTOKN";
-"NE_RT_NATNTIM";
-"NE_RT_NATPRME";
-"NE_RT_NATRTER";
-"NE_ST_INVSTKY";
-"NE_ST_STKEYWE";
-"NE_UP_CUPDERR";
-"NE_UP_CUPDMER";
-"NE_UP_UPDINER";
-"NE_UP_UPDNOUF";
-*/
+	var ClNeutralinoServerOff = "NE_CL_NSEROFF";
+	var ExExtensionNotConnected = "NE_EX_EXTNOTC";
+
+	var FsFileCopyError = "NE_FS_COPYFER";
+	var FsDIRCRER = "NE_FS_DIRCRER";
+	var FsFILRDER = "NE_FS_FILRDER";
+	var FsFILRMER = "NE_FS_FILRMER";
+	var FsFILWRER = "NE_FS_FILWRER";
+	var FsMOVEFER = "NE_FS_MOVEFER";
+	var FsNOPATHE = "NE_FS_NOPATHE";
+	var FsRMDIRER = "NE_FS_RMDIRER";
+
+	var OsTrayInitError = "NE_OS_TRAYIER";
+	var OsUnableToUpdate = "NE_OS_UNLTOUP";
+	var OsINVKNPT = "NE_OS_INVKNPT";
+	var OsInvalidMessageBoxArguments = "NE_OS_INVMSGA";
+
+	var RT_APIPRME = "NE_RT_APIPRME";
+	var RT_INVTOKN = "NE_RT_INVTOKN";
+	var RT_NATNTIM = "NE_RT_NATNTIM";
+	var RT_NATPRME = "NE_RT_NATPRME";
+	var RT_NATRTER = "NE_RT_NATRTER";
+
+	var ST_INVSTKY = "NE_ST_INVSTKY";
+	var ST_STKEYWE = "NE_ST_STKEYWE";
+
+	var UP_CUPDERR = "NE_UP_CUPDERR";
+	var UP_CUPDMER = "NE_UP_CUPDMER";
+	var UP_UPDINER = "NE_UP_UPDINER";
+	var UP_UPDNOUF = "NE_UP_UPDNOUF";
 }
