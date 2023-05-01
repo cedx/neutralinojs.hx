@@ -1,7 +1,5 @@
 package js.neutralino;
 
-import js.neutralino.App.AppMode;
-
 /** Provides global variables. **/
 @:native("")
 extern class Global {
