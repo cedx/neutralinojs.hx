@@ -5,7 +5,7 @@ import js.lib.Promise;
 /** Provides a shared key-value storage. **/
 extern class Storage {
 
-	/** Reads data for a given storage key. **/
+	/** Reads data for the specified storage key. **/
 	function getData(key: String): Promise<String>;
 
 	/** Returns all storage keys. **/

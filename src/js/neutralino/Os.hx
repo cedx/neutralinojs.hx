@@ -9,7 +9,7 @@ extern class Os {
 	/** Executes a command and returns the output. **/
 	function execCommand(command: String, ?options: ExecCommandOptions): Promise<ExecCommandResult>;
 
-	/** Provides the value of a given environment variable. **/
+	/** Provides the value of the specified environment variable. **/
 	function getEnv(key: String): Promise<String>;
 
 	/** Returns all environment variables and their values. **/
@@ -45,7 +45,7 @@ extern class Os {
 	/** Spawns a process based on a command in background and let developers control it. **/
 	function spawnProcess(command: String): Promise<SpawnedProcess>;
 
-	/** Updates a spawned process based on a provided action and data. **/
+	/** Invokes an action on the specified spawned process. **/
 	function updateSpawnedProcess(id: Int, action: SpawnedProcessAction, ?data: Any): Promise<Void>;
 }
 
@@ -200,7 +200,7 @@ typedef SpawnedProcess = {
 	final pid: Int;
 }
 
-/** An action to apply to a spawned process. **/
+/** An action to invoke on a spawned process. **/
 enum abstract SpawnedProcessAction(String) to String {
 
 	/** Terminates the process. **/

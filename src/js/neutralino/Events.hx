@@ -46,7 +46,7 @@ enum abstract EventType(String) to String {
 	/** Occurs when the application is about to be reloaded after a resource modification. **/
 	var NeuDevReloadApp = "neuDev_reloadApp";
 
-	/** Occurs for each read action and whenever stream cursor reaches EOF. **/
+	/** Occurs for each read action and whenever stream cursor reaches `EOF`. **/
 	var OpenedFile = "openedFile";
 
 	/** Occurs when the client library connects with the Neutralinojs server. **/

@@ -5,7 +5,7 @@ import js.lib.Promise;
 /** Provides methods related to built-in automatic updater. **/
 extern class Updater {
 
-	/** Checks the latest updates from the given URL. **/
+	/** Checks the latest updates from the specified URL. **/
 	function checkForUpdates(url: String): Promise<Manifest>;
 
 	/** Installs updates from the downloaded update manifest. **/
