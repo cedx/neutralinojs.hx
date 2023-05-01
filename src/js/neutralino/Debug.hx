@@ -9,7 +9,7 @@ extern class Debug {
 	function log(message: String, ?type: LogType): Promise<Void>;
 }
 
-/** Defines the type of a log message. **/
+/** The type of a log message. **/
 enum abstract LogType(String) to String {
 
 	/** An error message. **/

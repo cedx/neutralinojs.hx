@@ -2,7 +2,7 @@ package js.neutralino;
 
 /** Provides global variables. **/
 @:native("")
-extern class Global {
+extern class Globals {
 
 	/** The application identifier. **/
 	static final NL_APPID: String;

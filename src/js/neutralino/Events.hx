@@ -19,7 +19,7 @@ extern class Events {
 	function on(event: String, handler: CustomEvent -> Void): Promise<Void>;
 }
 
-/** Defines the type of an event. **/
+/** The type of an event. **/
 enum abstract EventType(String) to String {
 
 	/** Occurs when a new application instance starts. **/

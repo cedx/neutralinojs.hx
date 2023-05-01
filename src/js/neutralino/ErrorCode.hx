@@ -1,19 +1,9 @@
 package js.neutralino;
 
-/** TODO **/
+/** The error codes. **/
 enum abstract ErrorCode(String) to String {
-	// NE_CL_NSEROFF	Neutralinojs server is not reachable.	all
-	// NE_EX_EXTNOTC	Extension is not connected yet	extensions.dispatch
-	// NE_FS_COPYFER	File copy error.	filesystem.copyFile
-	// NE_FS_DIRCRER	Unable to create directory.	os.createDirectory
-	// NE_FS_FILOPER	File open error.	filesystem.openFile
-	// NE_FS_FILRDER	File read error.	filesystem.readFile, filesystem.readBinaryFile
-	// NE_FS_FILRMER	File remove error.	filesystem.removeFile
-	// NE_FS_FILWRER	File write error.	filesystem.writeFile, filesystem.writeBinaryFile
-	// NE_FS_MOVEFER	File move error.	filesystem.moveFile
 	// NE_FS_NOPATHE	No file or directory.	filesystem.getStats, filesystem.readDirectory
 	// NE_FS_NOWATID	Unable to find watcher.	filesystem.removeWatcher
-	// NE_FS_RMDIRER	Unable to remove directory.	os.removeDirectory
 	// NE_FS_UNLCWAT	Unable to create watcher.	filesystem.createWatcher
 	// NE_FS_UNLTFOP	Unable to find opened file id.	filesystem.getOpenedFileInfo
 	// NE_FS_UNLTOUP	Unable to update opened file id.	filesystem.updateOpenedFile
@@ -33,17 +23,44 @@ enum abstract ErrorCode(String) to String {
 	// NE_UP_UPDINER	Update installation error	updater.install
 	// NE_UP_UPDNOUF	No update manifest loaded	updater.install
 
+	/** The Neutralinojs server is not reachable. **/
 	var ClNeutralinoServerOff = "NE_CL_NSEROFF";
+
+	/** The extension is not connected yet. **/
 	var ExExtensionNotConnected = "NE_EX_EXTNOTC";
 
-	var FsFileCopyError = "NE_FS_COPYFER";
-	var FsDIRCRER = "NE_FS_DIRCRER";
-	var FsFILRDER = "NE_FS_FILRDER";
-	var FsFILRMER = "NE_FS_FILRMER";
-	var FsFILWRER = "NE_FS_FILWRER";
-	var FsMOVEFER = "NE_FS_MOVEFER";
-	var FsNOPATHE = "NE_FS_NOPATHE";
-	var FsRMDIRER = "NE_FS_RMDIRER";
+	/** Unable to copy the file. **/
+	var FsCopyFileError = "NE_FS_COPYFER";
+
+	/** Unable to create the directory. **/
+	var FsCreateDirectoryError = "NE_FS_DIRCRER";
+
+	/** Unable to find an opened file. **/
+	var FsFindOpenedFileError = "NE_FS_UNLTFOP";
+
+	/** Unable to move the file. **/
+	var FsMoveFileError = "NE_FS_MOVEFER";
+
+	/** TODO **/
+	var FsNoPathError = "NE_FS_NOPATHE";
+
+	/** Unable to open the file. **/
+	var FsOpenFileError = "NE_FS_FILOPER";
+
+	/** Unable to read the file. **/
+	var FsReadFileError = "NE_FS_FILRDER";
+
+	/** Unable to remove the directory. **/
+	var FsRemoveDirectoryError = "NE_FS_RMDIRER";
+
+	/** Unable to remove the file. **/
+	var FsRemoveFileError = "NE_FS_FILRMER";
+
+	/** Unable to update an opened file. **/
+	var FsUpdateOpenedFileError = "NE_FS_UNLTOUP";
+
+	/** Unable to write the file. **/
+	var FsWriteFileError = "NE_FS_FILWRER";
 
 	var OsTrayInitError = "NE_OS_TRAYIER";
 	var OsUnableToUpdate = "NE_OS_UNLTOUP";
