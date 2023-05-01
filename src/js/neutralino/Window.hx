@@ -3,7 +3,6 @@ package js.neutralino;
 import haxe.extern.EitherType;
 import js.html.Element;
 import js.lib.Promise;
-import js.neutralino.Os.Process;
 
 /** Provides methods related to the current native window instance. **/
 extern class Window {
