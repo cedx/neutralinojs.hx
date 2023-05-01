@@ -5,7 +5,7 @@ This library introduces the `js.Neutralino` class, which is a wrapper around the
 // TODO Sample code
 ```
 
-API documentation for the `neutralinojs` externs is available at the following address:  
+The API documentation for the `neutralinojs` externs is available at the following address:  
 [https://docs.belin.io/neutralinojs.hx/api](api/)
 
 > For more information about the Neutralinojs APIs, see [Native API Overview](https://neutralino.js.org/docs/api/overview)
