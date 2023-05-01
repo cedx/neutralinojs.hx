@@ -16,6 +16,7 @@ js.neutralino.Extensions
 js.neutralino.FileSystem
 js.neutralino.Global
 js.neutralino.Os
+js.neutralino.Position
 js.neutralino.Storage
 js.neutralino.Updater
 js.neutralino.Window

@@ -18,10 +18,10 @@ extern class Window {
 	function focus(): Promise<Void>;
 
 	/** Returns the window position coordinates. **/
-	function getPosition(): Promise<WindowPosition>;
+	function getPosition(): Promise<Position>;
 
 	/** Returns the window size information. **/
-	function getSize(): Promise<WindowSizeOptions>; // TODO options ??? or everything is "final"?
+	function getSize(): Promise<WindowSize>;
 
 	/** Returns the title of the native window. **/
 	function getTitle(): Promise<String>;
@@ -112,6 +112,31 @@ typedef WindowOptions = WindowSizeOptions & {
 	var ?title: String;
 }
 
+/** Information about the size of a native window. **/
+typedef WindowSize = {
+
+	/** The height in pixels. **/
+	final height: Int;
+
+	/** The maximum height in pixels. **/
+	final maxHeight: Int;
+
+	/** The maximum width in pixels. **/
+	final maxWidth: Int;
+
+	/** The minimum height in pixels. **/
+	final minHeight: Int;
+
+	/** The minimum width in pixels. **/
+	final minWidth: Int;
+
+	/** Value indicating wether the window is resizable or fixed. **/
+	final resizable: Bool;
+
+	/** The width in pixels. **/
+	final width: Int;
+}
+
 /** The options of the `Window.create()` method. **/
 typedef WindowSizeOptions = {
 
@@ -135,14 +160,4 @@ typedef WindowSizeOptions = {
 
 	/** The width in pixels. **/
 	var ?width: Int;
-}
-
-/** The coordinates of a native window. **/
-typedef WindowPosition = {
-
-	/** The horizontal position. **/
-	final x: Int;
-
-	/** The vertical position. **/
-	final y: Int;
 }

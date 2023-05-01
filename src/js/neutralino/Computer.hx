@@ -21,7 +21,7 @@ extern class Computer {
 	function getMemoryInfo(): Promise<{physical: MemoryInfo, virtual: MemoryInfo}>;
 
 	/** Returns the current mouse cursor position. **/
-	function getMousePosition(): Promise<MousePosition>;
+	function getMousePosition(): Promise<Position>;
 
 	/** Returns operating system information. **/
 	function getOSInfo(): Promise<OsInfo>;
@@ -124,16 +124,6 @@ typedef MemoryInfo = {
 
 	/** The total memory. **/
 	final total: Int;
-}
-
-/** The coordinates of the mouse cursor. **/
-typedef MousePosition = {
-
-	/** The distance from the left edge of the screen in pixels. **/
-	final x: Int;
-
-	/** The distance from the top edge of the screen in pixels. **/
-	final y: Int;
 }
 
 /** Operating system information. **/
