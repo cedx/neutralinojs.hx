@@ -6,8 +6,8 @@ import js.lib.Promise;
 extern class Clipboard {
 
 	/** Reads text from the system clipboard. **/
-	function readText(key: String, data: String): Promise<Void>;
+	function readText(): Promise<String>;
 
 	/** Writes text into the system clipboard. **/
-	function writeText(data: String): Promise<String>;
+	function writeText(data: String): Promise<Void>;
 }

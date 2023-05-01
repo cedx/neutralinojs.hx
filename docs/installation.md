@@ -34,5 +34,5 @@ lix +lib neutralinojs
 Now in your [Haxe](https://haxe.org) code, you can use:
 
 ```haxe
-import js.neutralino.*;
+import js.Neutralino;
 ```

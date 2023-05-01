@@ -2,7 +2,7 @@ package js.neutralino;
 
 /** TODO **/
 enum abstract ErrorCode(String) to String {
-	// NE_CL_NSEROFF	Neutralino server is not reachable.	all
+	// NE_CL_NSEROFF	Neutralinojs server is not reachable.	all
 	// NE_EX_EXTNOTC	Extension is not connected yet	extensions.dispatch
 	// NE_FS_COPYFER	File copy error.	filesystem.copyFile
 	// NE_FS_DIRCRER	Unable to create directory.	os.createDirectory

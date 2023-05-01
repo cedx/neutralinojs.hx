@@ -5,6 +5,7 @@ import js.neutralino.Clipboard;
 import js.neutralino.Computer;
 import js.neutralino.Custom;
 import js.neutralino.Debug;
+import js.neutralino.Events;
 import js.neutralino.Extensions;
 import js.neutralino.Storage;
 import js.neutralino.Updater;
@@ -22,11 +23,14 @@ extern class Neutralino {
 	/** Information about the user's hardware. **/
 	static final computer: Computer;
 
-	/** The extensions API. **/
+	/** The custom methods added by the application developer. **/
 	static final custom: Custom;
 
 	/** The debugging utility. **/
 	static final debug: Debug;
+
+	/** The event manager. **/
+	static final events: Events;
 
 	/** The extension manager. **/
 	static final extensions: Extensions;

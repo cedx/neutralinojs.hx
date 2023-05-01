@@ -104,7 +104,7 @@ typedef MemoryInfo = {
 	final total: Int;
 }
 
-/** Provides the mouse coordinates. **/
+/** Provides the coordinates of the mouse cursor. **/
 typedef MousePosition = {
 
 	/** The distance from the left edge of the screen in pixels. **/
