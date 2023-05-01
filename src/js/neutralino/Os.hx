@@ -21,7 +21,7 @@ extern class Os {
 	/** Returns all spawned processes. **/
 	function getSpawnedProcesses(): Promise<Array<SpawnedProcess>>;
 
-	/** Opens a URL with the default web browser. **/
+	/** Opens the specified URL with the default web browser. **/
 	function open(url: String): Promise<Void>;
 
 	/** Creates or updates the tray icon and menu. **/
