@@ -59,8 +59,12 @@ extern class Global {
 	static final NL_VERSION: String;
 }
 
-/** TODO **/
+/** Defines the loading mode of application resources. **/
 enum abstract ResourceMode(String) to String {
+
+	/** The resources are loaded from a bundle. **/
 	var Bundle = "bundle";
+
+	/** The resources are loaded from a directory. **/
 	var Directory = "directory";
 }
