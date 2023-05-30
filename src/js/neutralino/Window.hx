@@ -7,6 +7,9 @@ import js.lib.Promise;
 /** Provides methods related to the current native window instance. **/
 extern class Window {
 
+	/** Centers the native window within the current display. **/
+	function center(): Promise<Void>;
+
 	/** Creates a native window. **/
 	function create(url: String, ?options: WindowOptions): Promise<Process>;
 
