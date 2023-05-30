@@ -10,7 +10,6 @@ js.neutralino.Clipboard
 js.neutralino.Computer
 js.neutralino.Custom
 js.neutralino.Debug
-# TODO js.neutralino.ErrorCode
 js.neutralino.Events
 js.neutralino.Extensions
 js.neutralino.FileSystem
