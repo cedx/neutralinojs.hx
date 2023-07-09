@@ -1,5 +1,5 @@
 //! --class-path src
-import neutralinojs.Version;
+import neutralinojs.Platform;
 import sys.FileSystem;
 import sys.io.File;
 using Lambda;
@@ -14,7 +14,7 @@ function main() {
 		"--define", "description", "Type definitions for using Neutralinojs with Haxe.",
 		"--define", "source-path", "https://github.com/cedx/neutralinojs.hx/blob/main/src",
 		"--define", "themeColor", "0xea8220",
-		"--define", "version", Version.packageVersion,
+		"--define", "version", Platform.packageVersion,
 		"--define", "website", "https://docs.belin.io/neutralinojs.hx",
 		"--include", "js\\.Neutralino",
 		"--include", "js\\.neutralino\\.*",
