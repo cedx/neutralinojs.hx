@@ -1,5 +1,5 @@
 # Haxe Externs for Neutralinojs
-![Haxe](https://badgen.net/badge/haxe/%3E%3D4.3.0/green) ![Neutralinojs](https://badgen.net/badge/neutralinojs/%3E%3D4.12.0/green) ![Haxelib](https://badgen.net/haxelib/v/neutralinojs) ![License](https://badgen.net/haxelib/license/neutralinojs) ![Downloads](https://badgen.net/haxelib/d/neutralinojs)
+![Haxe](https://badgen.net/badge/haxe/%3E%3D4.3.0/green) ![Neutralinojs](https://badgen.net/badge/neutralinojs/%3E%3D4.13.0/green) ![Haxelib](https://badgen.net/haxelib/v/neutralinojs) ![License](https://badgen.net/haxelib/license/neutralinojs) ![Downloads](https://badgen.net/haxelib/d/neutralinojs)
 
 Type definitions for using [Neutralinojs](https://neutralino.js.org) with [Haxe](https://haxe.org).
 
