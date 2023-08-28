@@ -54,6 +54,9 @@ extern class Globals {
 
 	/** The Neutralinojs framework version. **/
 	static final NL_VERSION: String;
+
+	/** Value indicating whether the initial window state was loaded from the saved configuration. **/
+	static final NL_WSAVSTLOADED: Bool;
 }
 
 /** The application mode. **/
