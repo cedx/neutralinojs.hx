@@ -129,8 +129,14 @@ enum abstract OpenedFileAction(String) to String {
 	/** Reads a bytes segment from the file stream. **/
 	var Read = "read";
 
+	/** Reads a bytes segment from the file stream, using the binary read mode. **/
+	var ReadBinary = "readBinary";
+
 	/** Triggers the `Read` action until file stream cursor position reaches `EOF`. **/
 	var ReadAll = "readAll";
+
+	/** Triggers the `Read` action until file stream cursor position reaches `EOF`, using the binary read mode. **/
+	var ReadAllBinary = "readAllBinary";
 
 	/** Sets the file cursor position. **/
 	var Seek = "seek";
