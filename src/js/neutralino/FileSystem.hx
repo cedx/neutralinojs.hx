@@ -27,6 +27,9 @@ extern class FileSystem {
 	/** Returns file statistics for the specified path. **/
 	function getStats(path: String): Promise<Stats>;
 
+	/** Returns information about created file watchers. **/
+	function getWatchers(): Promise<Array<FileWatcher>>;
+
 	/** Moves a file to a new destination. **/
 	function moveFile(source: String, destination: String): Promise<Void>;
 
@@ -89,6 +92,16 @@ typedef FileReaderOptions = {
 
 	/** The file reader buffer size in bytes. **/
 	var ?size: Int;
+}
+
+/** Represents a file watcher. **/
+typedef FileWatcher = {
+
+	/** The watcher identifier. **/
+	var id: Int;
+
+	/** The file watcher path. **/
+	var path: String;
 }
 
 /** Details about a file stream. **/
