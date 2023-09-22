@@ -43,7 +43,7 @@ extern class Os {
 	function showSaveDialog(?title: String, ?options: SaveDialogOptions): Promise<String>;
 
 	/** Spawns a process based on a command in background and let developers control it. **/
-	function spawnProcess(command: String): Promise<SpawnedProcess>;
+	function spawnProcess(command: String, ?cwd: String): Promise<SpawnedProcess>;
 
 	/** Invokes an action on the specified spawned process. **/
 	function updateSpawnedProcess(id: Int, action: SpawnedProcessAction, ?data: Any): Promise<Void>;
@@ -54,6 +54,9 @@ typedef ExecOptions = {
 
 	/** Value indicating whether to execute the command in background. **/
 	var ?background: Bool;
+
+	/** The current working directory. **/
+	var ?cwd: String;
 
 	/** The standard input as a string. **/
 	var ?stdIn: String;
