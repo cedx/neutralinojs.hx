@@ -4,8 +4,8 @@
 Type definitions for using [Neutralinojs](https://neutralino.js.org) with [Haxe](https://haxe.org).
 
 ## Documentation
-- [User guide](https://docs.belin.io/neutralinojs.hx)
-- [API reference](https://docs.belin.io/neutralinojs.hx/api)
+- [User guide](https://cedx.github.io/neutralinojs.hx)
+- [API reference](https://cedx.github.io/neutralinojs.hx/api)
 
 ## Development
 - [Git repository](https://github.com/cedx/neutralinojs.hx)
@@ -13,4 +13,4 @@ Type definitions for using [Neutralinojs](https://neutralino.js.org) with [Haxe]
 - [Submit an issue](https://github.com/cedx/neutralinojs.hx/issues)
 
 ## License
-[Haxe Externs for Neutralinojs](https://docs.belin.io/neutralinojs.hx) is distributed under the MIT License.
+[Haxe Externs for Neutralinojs](https://cedx.github.io/neutralinojs.hx) is distributed under the MIT License.

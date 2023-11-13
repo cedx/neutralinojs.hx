@@ -6,7 +6,7 @@ This library introduces the `js.Neutralino` class, which is a wrapper around the
 ```
 
 The API documentation for the `neutralinojs` externs is available at the following address:  
-[https://docs.belin.io/neutralinojs.hx/api](api/)
+[https://cedx.github.io/neutralinojs.hx/api](api/)
 
 > For more information about the Neutralinojs APIs, see [Native API Overview](https://neutralino.js.org/docs/api/overview)
 in the [Neutralinojs documentation](https://neutralino.js.org/docs).
@@ -26,9 +26,9 @@ import js.Browser;
 // Opens a given URL in the browser.
 function main() {
   #if neutralinojs
-    Neutralino.os.open("https://docs.belin.io/neutralinojs.hx");
+    Neutralino.os.open("https://cedx.github.io/neutralinojs.hx");
   #else
-    Browser.window.open("https://docs.belin.io/neutralinojs.hx", "_blank");
+    Browser.window.open("https://cedx.github.io/neutralinojs.hx", "_blank");
   #end
 }
 ```

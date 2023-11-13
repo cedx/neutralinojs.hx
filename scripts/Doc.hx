@@ -15,7 +15,7 @@ function main() {
 		"--define", "source-path", "https://github.com/cedx/neutralinojs.hx/blob/main/src",
 		"--define", "themeColor", "0xea8220",
 		"--define", "version", Platform.packageVersion,
-		"--define", "website", "https://docs.belin.io/neutralinojs.hx",
+		"--define", "website", "https://cedx.github.io/neutralinojs.hx",
 		"--include", "js\\.Neutralino",
 		"--include", "js\\.neutralino\\.*",
 		"--input-path", "var",
