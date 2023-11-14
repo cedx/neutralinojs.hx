@@ -26,9 +26,9 @@ import js.Browser;
 // Opens a given URL in the browser.
 function main() {
   #if neutralinojs
-    Neutralino.os.open("https://cedx.github.io/neutralinojs.hx");
+    Neutralino.os.open("https://github.com/cedx/neutralinojs.hx");
   #else
-    Browser.window.open("https://cedx.github.io/neutralinojs.hx", "_blank");
+    Browser.window.open("https://github.com/cedx/neutralinojs.hx", "_blank");
   #end
 }
 ```

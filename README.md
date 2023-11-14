@@ -13,4 +13,4 @@ Type definitions for using [Neutralinojs](https://neutralino.js.org) with [Haxe]
 - [Submit an issue](https://github.com/cedx/neutralinojs.hx/issues)
 
 ## License
-[Haxe Externs for Neutralinojs](https://cedx.github.io/neutralinojs.hx) is distributed under the MIT License.
+[Haxe Externs for Neutralinojs](https://github.com/cedx/neutralinojs.hx) is distributed under the MIT License.
