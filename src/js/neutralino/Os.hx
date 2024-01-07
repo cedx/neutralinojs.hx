@@ -31,7 +31,7 @@ extern class Os {
 	function showFolderDialog(?title: String, ?options: FolderDialogOptions): Promise<String>;
 
 	/** Displays a message box. **/
-	function showMessageBox(title: String, content: String, ?choice: MessageBoxChoice, ?icon: Icon): Promise<String>;
+	function showMessageBox(title: String, content: String, ?choice: MessageBoxButtons, ?icon: Icon): Promise<MessageBoxResult>;
 
 	/** Displays a notification message. **/
 	function showNotification(title: String, content: String, ?icon: Icon): Promise<Void>;
@@ -130,7 +130,7 @@ enum abstract KnownPath(String) to String {
 }
 
 /** The buttons to display in a message box. **/
-enum abstract MessageBoxChoice(String) to String {
+enum abstract MessageBoxButtons(String) to String {
 
 	/** The message box contains "Abort", "Retry" and "Ignore" buttons. **/
 	var AbortRetryIgnore = "ABORT_RETRY_IGNORE";
