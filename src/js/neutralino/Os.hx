@@ -151,6 +151,31 @@ enum abstract MessageBoxButtons(String) to String {
 	var YesNoCancel = "YES_NO_CANCEL";
 }
 
+/** Specifies the return value of a message box. **/
+enum abstract MessageBoxResult(String) to String {
+
+	/** The return value of the message box is "Abort". **/
+	var Abort = "ABORT";
+
+	/** The return value of the message box is "Cancel". **/
+	var Cancel = "CANCEL";
+
+	/** The return value of the message box is "Ignore". **/
+	var Ignore = "IGNORE";
+
+	/** The return value of the message box is "No". **/
+	var No = "NO";
+
+	/** The return value of the message box is "OK". **/
+	var Ok = "OK";
+
+	/** The return value of the message box is "Retry". **/
+	var Retry = "RETRY";
+
+	/** The return value of the message box is "Yes". **/
+	var Yes = "YES";
+}
+
 /** The options of the `Os.showOpenDialog()` method. **/
 typedef OpenDialogOptions = {
 
