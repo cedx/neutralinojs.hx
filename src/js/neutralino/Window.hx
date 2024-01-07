@@ -92,6 +92,9 @@ typedef WindowOptions = WindowSizeOptions & {
 	/** Value indicating whether to exit the application process when the user clicks the window's close button. **/
 	var ?exitProcessOnClose: Bool;
 
+	/** A custom string used to extend the default user agent string. **/
+	var ?extendUserAgentWith: String;
+
 	/** Value indicating whether to set the full screen mode. **/
 	var ?fullScreen: Bool;
 
@@ -112,6 +115,12 @@ typedef WindowOptions = WindowSizeOptions & {
 
 	/** The window title. **/
 	var ?title: String;
+
+	/** The distance from the left edge of the screen in pixels. **/
+	var ?x: Int;
+
+	/** The distance from the top edge of the screen in pixels. **/
+	var ?y: Int;
 }
 
 /** Information about the size of a native window. **/

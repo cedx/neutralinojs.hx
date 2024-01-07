@@ -7,20 +7,20 @@ import js.lib.Promise;
 extern class Events {
 
 	/** Dispatches a new event to all clients (both application and extension clients). **/
-	function broadcast(event: String, ?data: Any): Promise<Void>;
+	function broadcast(event: EventType, ?data: Any): Promise<Void>;
 
 	/** Dispatches a new event to the current application instance. **/
-	function dispatch(event: String, ?data: Any): Promise<Void>;
+	function dispatch(event: EventType, ?data: Any): Promise<Void>;
 
 	/** Unregisters an event handler. **/
-	function off(event: String, handler: CustomEvent -> Void): Promise<Void>;
+	function off(event: EventType, handler: CustomEvent -> Void): Promise<Void>;
 
 	/** Registers a new event handler. **/
-	function on(event: String, handler: CustomEvent -> Void): Promise<Void>;
+	function on(event: EventType, handler: CustomEvent -> Void): Promise<Void>;
 }
 
 /** The type of an event. **/
-enum abstract EventType(String) to String {
+enum abstract EventType(String) from String to String {
 
 	/** Occurs when a new application instance starts. **/
 	var AppClientConnect = "appClientConnect";
