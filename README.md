@@ -4,12 +4,11 @@
 Type definitions for using [Neutralinojs](https://neutralino.js.org) with [Haxe](https://haxe.org).
 
 ## Documentation
-- [User guide](https://cedx.github.io/neutralinojs.hx)
-- [API reference](https://cedx.github.io/neutralinojs.hx/api)
+- [User guide](https://github.com/cedx/neutralinojs.hx/wiki)
+- [Examples](https://github.com/cedx/neutralinojs.hx/tree/main/example)
 
 ## Development
 - [Git repository](https://github.com/cedx/neutralinojs.hx)
-- [Haxelib package](https://lib.haxe.org/p/neutralinojs)
 - [Submit an issue](https://github.com/cedx/neutralinojs.hx/issues)
 
 ## License
