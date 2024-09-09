@@ -1,5 +1,7 @@
 package js.neutralino;
 
+import js.neutralino.Computer.CpuArchitecture;
+
 /** Provides global variables. **/
 @:native("window")
 extern class Globals {
@@ -9,6 +11,9 @@ extern class Globals {
 
 	/** The application version. **/
 	static final NL_APPVERSION: String;
+
+	/** The processor architecture. **/
+	static final NL_ARCH: CpuArchitecture;
 
 	/** The command line arguments. **/
 	static final NL_ARGS: Array<String>;
@@ -81,8 +86,14 @@ enum abstract OsName(String) from String to String {
 	/** The operating system is macOS. **/
 	var Darwin;
 
+	/** The operating system is FreeBSD. **/
+	var FreeBSD;
+
 	/** The operating system is Linux. **/
 	var Linux;
+
+	/** The operating system is unknown. **/
+	var Unknown;
 
 	/** The operating system is Windows. **/
 	var Windows;
