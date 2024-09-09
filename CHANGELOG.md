@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.0.0](https://github.com/cedx/neutralinojs.hx/compare/v2.0.0...v3.0.0)
+- Upgraded the [Neutralinojs](https://neutralino.js.org) APIs to version 5.3.0.
+
 ## Version [2.0.0](https://github.com/cedx/neutralinojs.hx/compare/v1.3.0...v2.0.0)
 - Breaking change: renamed the `MessageBoxChoice` enumeration to `MessageBoxButtons`.
 - Added the `MessageBoxResult` enumeration.
