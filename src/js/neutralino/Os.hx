@@ -125,6 +125,9 @@ enum abstract KnownPath(String) from String to String {
 	/** The second "Saved Games" folder. **/
 	var SavedGames2 = "savedGames2";
 
+	/** The temporary files folder. **/
+	var Temp = "temp";
+
 	/** The "Videos" folder. **/
 	var Video = "video";
 }
