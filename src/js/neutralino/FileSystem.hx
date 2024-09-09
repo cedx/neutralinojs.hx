@@ -15,6 +15,10 @@ extern class FileSystem {
 	/** Copies a file or directory to a new destination. **/
 	function copy(source: String, destination: String, ?options: CopyOptions): Promise<Void>;
 
+	/** Copies a file to a new destination. **/
+	@:deprecated("Use the `copy()` method instead.")
+	function copyFile(source: String, destination: String): Promise<Void>;
+
 	/** Creates a new directory. **/
 	function createDirectory(path: String): Promise<Void>;
 
@@ -42,6 +46,10 @@ extern class FileSystem {
 	/** Moves a file or directory to a new destination. **/
 	function move(source: String, destination: String): Promise<Void>;
 
+	/** Moves a file to a new destination. **/
+	@:deprecated("Use the `move()` method instead.")
+	function moveFile(source: String, destination: String): Promise<Void>;
+
 	/** Creates a readable file stream. **/
 	function openFile(path: String): Promise<Int>;
 
@@ -56,6 +64,14 @@ extern class FileSystem {
 
 	/** Removes the specified file or directory. **/
 	function remove(path: String): Promise<Void>;
+
+	/** Removes the specified directory. **/
+	@:deprecated("Use the `remove()` method instead.")
+	function removeDirectory(path: String): Promise<Void>;
+
+	/** Removes the specified file. **/
+	@:deprecated("Use the `remove()` method instead.")
+	function removeFile(path: String): Promise<Void>;
 
 	/** Removes a filesystem watcher. **/
 	function removeWatcher(id: Int): Promise<Int>;
