@@ -26,7 +26,7 @@ extern class FileSystem {
 	function createWatcher(path: String): Promise<Int>;
 
 	/** Returns the absolute path for a given path. **/
-	function getAbsolutePath(path: Sring): Promise<String>;
+	function getAbsolutePath(path: String): Promise<String>;
 
 	/** Returns details about a file stream. **/
 	function getOpenedFileInfo(id: Int): Promise<OpenedFile>;
@@ -35,7 +35,7 @@ extern class FileSystem {
 	function getPathParts(path: String): Promise<PathParts>;
 
 	/** Returns the relative path for a given path and base. **/
-	function getRelativePath(path: Sring, ?base: String): Promise<String>;
+	function getRelativePath(path: String, ?base: String): Promise<String>;
 
 	/** Returns file statistics for the specified path. **/
 	function getStats(path: String): Promise<Stats>;
