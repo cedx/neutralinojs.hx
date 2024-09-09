@@ -12,5 +12,5 @@ extern class Storage {
 	function getKeys(): Promise<Array<String>>;
 
 	/** Writes data into the storage. **/
-	function setData(key: String, data: String): Promise<Void>;
+	function setData(key: String, data: Null<String>): Promise<Void>;
 }
