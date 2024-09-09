@@ -18,8 +18,17 @@ extern class App {
 	/** Kills the application process. **/
 	function killProcess(): Promise<Void>;
 
+	/** Reads string data from the standard input stream of the application process. **/
+	function readProcessInput(?readAll: Bool): Promise<String>;
+
 	/** Restarts the current application instance. **/
 	function restartProcess(?options: RestartOptions): Promise<Void>;
+
+	/** Writes string data to the standard error stream of the application process. **/
+	function writeProcessError(data: String): Promise<Void>;
+
+	/** Writes string data to the standard output stream of the application process. **/
+	function writeProcessOutput(data: String): Promise<Void>;
 }
 
 /** The options of the `App.restartProcess()` method. **/
