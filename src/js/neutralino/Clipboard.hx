@@ -16,7 +16,7 @@ extern class Clipboard {
 	function readText(): Promise<String>;
 
 	/** Writes an image into the system clipboard. **/
-	function writeImage(image: ClipboardImage): Promise<Void>;
+	function writeImage(image: ClipboardImageOptions): Promise<Void>;
 
 	/** Writes text into the system clipboard. **/
 	function writeText(text: String): Promise<Void>;
@@ -37,6 +37,43 @@ enum abstract ClipboardFormat(String) from String to String {
 
 /** Represents an image stored into the system clipboard. **/
 typedef ClipboardImage = {
+
+	/** The blue mask. **/
+	final blueMask: Int;
+
+	/** The blue shift. **/
+	final blueShift: Int;
+
+	/** The number of bits per pixel (BPP). **/
+	final bpp: Int;
+
+	/** The number of bytes per row (BPR). **/
+	final bpr: Int;
+
+	/** The raw RGBA binary data of the image in an array buffer. **/
+	final data: ArrayBuffer;
+
+	/** The green mask. **/
+	final greenMask: Int;
+
+	/** The green shift. **/
+	final greenShift: Int;
+
+	/** The image height. **/
+	final height: Int;
+
+	/** The red mask. **/
+	final redMask: Int;
+
+	/** The red shift. **/
+	final redShift: Int;
+
+	/** The image width. **/
+	final width: Int;
+}
+
+/** The options of the `Clipboard.writeImage()` method. **/
+typedef ClipboardImageOptions = {
 
 	/** The blue mask. **/
 	var ?blueMask: Int;
