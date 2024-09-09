@@ -80,7 +80,7 @@ typedef FolderDialogOptions = {
 }
 
 /** The icon to display in a message box or notification. **/
-enum abstract Icon(String) to String {
+enum abstract Icon(String) from String to String {
 
 	/** A symbol consisting of white "X" in a circle with a red background. **/
 	var Error = "ERROR";
@@ -96,7 +96,7 @@ enum abstract Icon(String) to String {
 }
 
 /** The known platform-specific folders. **/
-enum abstract KnownPath(String) to String {
+enum abstract KnownPath(String) from String to String {
 
 	/** The cache folder. **/
 	var Cache = "cache";
@@ -130,7 +130,7 @@ enum abstract KnownPath(String) to String {
 }
 
 /** The buttons to display in a message box. **/
-enum abstract MessageBoxButtons(String) to String {
+enum abstract MessageBoxButtons(String) from String to String {
 
 	/** The message box contains "Abort", "Retry" and "Ignore" buttons. **/
 	var AbortRetryIgnore = "ABORT_RETRY_IGNORE";
@@ -152,7 +152,7 @@ enum abstract MessageBoxButtons(String) to String {
 }
 
 /** Specifies the return value of a message box. **/
-enum abstract MessageBoxResult(String) to String {
+enum abstract MessageBoxResult(String) from String to String {
 
 	/** The return value of the message box is "Abort". **/
 	var Abort = "ABORT";
@@ -213,7 +213,7 @@ typedef SpawnedProcess = {
 }
 
 /** An action to invoke on a spawned process. **/
-enum abstract SpawnedProcessAction(String) to String {
+enum abstract SpawnedProcessAction(String) from String to String {
 
 	/** Terminates the process. **/
 	var Exit = "exit";

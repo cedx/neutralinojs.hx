@@ -28,7 +28,7 @@ extern class Computer {
 }
 
 /** The processor architecture. **/
-enum abstract CpuArchitecture(String) to String {
+enum abstract CpuArchitecture(String) from String to String {
 
 	/** The processor architecture is ARM. **/
 	var Arm = "arm";
@@ -101,7 +101,7 @@ typedef KernelInfo = {
 }
 
 /** The kernel type. **/
-enum abstract KernelType(String) to String {
+enum abstract KernelType(String) from String to String {
 
 	/** The kernel is Darwin. **/
 	var Darwin;

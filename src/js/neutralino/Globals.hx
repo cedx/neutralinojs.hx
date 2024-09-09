@@ -60,7 +60,7 @@ extern class Globals {
 }
 
 /** The application mode. **/
-enum abstract AppMode(String) to String {
+enum abstract AppMode(String) from String to String {
 
 	/** Uses the user's default browser to load the application. **/
 	var Browser = "browser";
@@ -76,7 +76,7 @@ enum abstract AppMode(String) to String {
 }
 
 /** The operating system names. **/
-enum abstract OsName(String) to String {
+enum abstract OsName(String) from String to String {
 
 	/** The operating system is macOS. **/
 	var Darwin;
@@ -89,7 +89,7 @@ enum abstract OsName(String) to String {
 }
 
 /** The loading mode of application resources. **/
-enum abstract ResourceMode(String) to String {
+enum abstract ResourceMode(String) from String to String {
 
 	/** The resources are loaded from a bundle. **/
 	var Bundle = "bundle";

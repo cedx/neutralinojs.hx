@@ -12,8 +12,8 @@ extern class FileSystem {
 	/** Appends text content to a file. **/
 	function appendFile(path: String, data: String): Promise<Void>;
 
-	/** Copies a file to a new destination. **/
-	function copyFile(source: String, destination: String): Promise<Void>;
+	/** Copies a file or directory to a new destination. **/
+	function copy(source: String, destination: String, ?options: CopyOptions): Promise<Void>;
 
 	/** Creates a new directory. **/
 	function createDirectory(path: String): Promise<Void>;
@@ -21,8 +21,17 @@ extern class FileSystem {
 	/** Creates a filesystem watcher. **/
 	function createWatcher(path: String): Promise<Int>;
 
+	/** Returns the absolute path for a given path. **/
+	function getAbsolutePath(path: Sring): Promise<String>;
+
 	/** Returns details about a file stream. **/
 	function getOpenedFileInfo(id: Int): Promise<OpenedFile>;
+
+	/** Parses a given path and returns its parts. **/
+	function getPathParts(path: String): Promise<PathParts>;
+
+	/** Returns the relative path for a given path and base. **/
+	function getRelativePath(path: Sring, ?base: String): Promise<String>;
 
 	/** Returns file statistics for the specified path. **/
 	function getStats(path: String): Promise<Stats>;
@@ -30,8 +39,8 @@ extern class FileSystem {
 	/** Returns information about created file watchers. **/
 	function getWatchers(): Promise<Array<FileWatcher>>;
 
-	/** Moves a file to a new destination. **/
-	function moveFile(source: String, destination: String): Promise<Void>;
+	/** Moves a file or directory to a new destination. **/
+	function move(source: String, destination: String): Promise<Void>;
 
 	/** Creates a readable file stream. **/
 	function openFile(path: String): Promise<Int>;
@@ -40,16 +49,13 @@ extern class FileSystem {
 	function readBinaryFile(path: String, ?options: FileReaderOptions): Promise<ArrayBuffer>;
 
 	/** Reads the contents of the specified directory. **/
-	function readDirectory(path: String): Promise<Array<DirectoryEntry>>;
+	function readDirectory(path: String, ?options: DirectoryReaderOptions): Promise<Array<DirectoryEntry>>;
 
 	/** Reads a text file. **/
 	function readFile(path: String, ?options: FileReaderOptions): Promise<String>;
 
-	/** Removes the specified directory. **/
-	function removeDirectory(path: String): Promise<Void>;
-
-	/** Removes the specified file. **/
-	function removeFile(path: String): Promise<Void>;
+	/** Removes the specified file or directory. **/
+	function remove(path: String): Promise<Void>;
 
 	/** Removes a filesystem watcher. **/
 	function removeWatcher(id: Int): Promise<Int>;
@@ -64,6 +70,19 @@ extern class FileSystem {
 	function writeFile(path: String, data: String): Promise<Void>;
 }
 
+/** The options of the `FileSystem.copy()` method. **/
+typedef CopyOptions = {
+
+	/** Value indicating whether to overwrite an existing file with the same name. **/
+	var ?overwrite: Bool;
+
+	/** Value indicating whether to copy sub-directories recursively. **/
+	var ?recursive: Bool;
+
+	/** Value indicating whether to skip an existing file with the same name. **/
+	var ?skip: Bool;
+}
+
 /** A directory entry. **/
 typedef DirectoryEntry = {
 
@@ -75,13 +94,20 @@ typedef DirectoryEntry = {
 }
 
 /** The type of a directory entry. **/
-enum abstract DirectoryEntryType(String) to String {
+enum abstract DirectoryEntryType(String) from String to String {
 
 	/** The entry is a directory. **/
 	var Directory = "DIRECTORY";
 
 	/** The entry is a file. **/
 	var File = "FILE";
+}
+
+/** The options of the `FileSystem.readDirectory()` method. **/
+typedef DirectoryReaderOptions = {
+
+	/** Value indicating whether to read sub-directories recursively. **/
+	var ?recursive: Bool;
 }
 
 /** The options of the `FileSystem.readBinaryFile()` and `FileSystem.readFile()` methods. **/
@@ -98,10 +124,10 @@ typedef FileReaderOptions = {
 typedef FileWatcher = {
 
 	/** The watcher identifier. **/
-	var id: Int;
+	final id: Int;
 
 	/** The file watcher path. **/
-	var path: String;
+	final path: String;
 }
 
 /** Details about a file stream. **/
@@ -121,7 +147,7 @@ typedef OpenedFile = {
 }
 
 /** An action to invoke on an opened file. **/
-enum abstract OpenedFileAction(String) to String {
+enum abstract OpenedFileAction(String) from String to String {
 
 	/** Closes and frees file handler resources. **/
 	var Close = "close";
@@ -140,6 +166,34 @@ enum abstract OpenedFileAction(String) to String {
 
 	/** Sets the file cursor position. **/
 	var Seek = "seek";
+}
+
+/** Represents the different parts of a file path. **/
+typedef PathParts = {
+
+	/** The file extension. **/
+	final extension: String;
+
+	/** The file name. **/
+	final filename: String;
+
+	/** The parent path or the directory path without filename. **/
+	final parentPath: String;
+
+	/** The path relative to the root path. **/
+	final relativePath: String;
+
+	/** The root path directory. **/
+	final rootDirectory: String;
+
+	/** The root path name. **/
+	final rootName: String;
+
+	/** The root path. **/
+	final rootPath: String;
+
+	/** The filename segment without extension. **/
+	final stem: String;
 }
 
 /** Statistics about a file system entity. **/

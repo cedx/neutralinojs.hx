@@ -10,7 +10,7 @@ extern class Debug {
 }
 
 /** The type of a log message. **/
-enum abstract LogType(String) to String {
+enum abstract LogType(String) from String to String {
 
 	/** An error message. **/
 	var Error = "ERROR";
