@@ -43,9 +43,6 @@ enum abstract EventType(String) from String to String {
 	/** Occurs when an extension is ready to communicate with the application. **/
 	var ExtensionReady = "extensionReady";
 
-	/** Occurs when the application is about to be reloaded after a resource modification. **/
-	var NeuDevReloadApp = "neuDev_reloadApp";
-
 	/** Occurs for each read action and whenever stream cursor reaches `EOF`. **/
 	var OpenedFile = "openedFile";
 
