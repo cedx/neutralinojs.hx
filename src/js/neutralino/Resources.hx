@@ -6,7 +6,7 @@ import js.lib.Promise;
 /** Provides methods to parse, read, and extract the loaded resource bundle (`resources.neu`). **/
 extern class Resources {
 
-	/** Extracts a file from the resources bundle to a preferred path. **/
+	/** Extracts a file from the resource bundle to a preferred path. **/
 	function extractFile(path: String, destination: String): Promise<Void>;
 
 	/** Returns all files and directories embedded in the resource bundle. **/
