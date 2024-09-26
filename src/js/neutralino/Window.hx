@@ -37,6 +37,9 @@ extern class Window {
 	/** Gets a value indicating whether the native window is maximized. **/
 	function isMaximized(): Promise<Bool>;
 
+	/** Gets a value indicating whether the native window is minimized. **/
+	function isMinimized(): Promise<Bool>;
+
 	/** Gets a value indicating whether the native window is visible. **/
 	function isVisible(): Promise<Bool>;
 
@@ -70,8 +73,11 @@ extern class Window {
 	/** Shows the native window. **/
 	function show(): Promise<Void>;
 
-	/** Restores the native window. **/
+	/** Restores the native window from the maximized state. **/
 	function unmaximize(): Promise<Void>;
+
+	/** Restores the native window from the minimized state. **/
+	function unminimize(): Promise<Void>;
 
 	/** Converts a draggable region to a normal DOM element by removing drag event handlers. **/
 	function unsetDraggableRegion(elementOrId: EitherType<Element, String>): Promise<Void>;

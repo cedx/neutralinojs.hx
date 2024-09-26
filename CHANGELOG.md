@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [3.1.0](https://github.com/cedx/neutralinojs.hx/compare/v3.0.0...v3.1.0)
+- Upgraded the [Neutralinojs](https://neutralino.js.org) APIs to version 5.4.0.
+
 ## Version [3.0.0](https://github.com/cedx/neutralinojs.hx/compare/v2.0.0...v3.0.0)
 - Upgraded the [Neutralinojs](https://neutralino.js.org) APIs to version 5.3.0.
 
