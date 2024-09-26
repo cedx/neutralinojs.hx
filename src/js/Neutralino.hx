@@ -1,18 +1,6 @@
 package js;
 
-import js.neutralino.App;
-import js.neutralino.Clipboard;
-import js.neutralino.Computer;
-import js.neutralino.Custom;
-import js.neutralino.Debug;
-import js.neutralino.Events;
-import js.neutralino.Extensions;
-import js.neutralino.FileSystem;
-import js.neutralino.Os;
-import js.neutralino.Resources;
-import js.neutralino.Storage;
-import js.neutralino.Updater;
-import js.neutralino.Window;
+import js.neutralino.*;
 
 /** The top-level Neutralinojs object. **/
 @:native("Neutralino")

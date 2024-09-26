@@ -2,6 +2,7 @@
 	"defaultSeverity": "ERROR",
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
+		"AvoidStarImport": ["src/js/Neutralino"],
 		"Dynamic": ["src/js/neutralino/App:getConfig", "src/js/neutralino/Os:getEnvs"]
 	},
 	"checks": [
