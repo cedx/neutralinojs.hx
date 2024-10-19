@@ -1,5 +1,6 @@
 package js.neutralino;
 
+import haxe.DynamicAccess;
 import js.lib.Promise;
 
 /** Provides methods related to the user's operating system. **/
@@ -12,7 +13,7 @@ extern class Os {
 	function getEnv(key: String): Promise<String>;
 
 	/** Returns all environment variables and their values. **/
-	function getEnvs(): Promise<Dynamic<String>>;
+	function getEnvs(): Promise<DynamicAccess<String>>;
 
 	/** Returns the path to a known platform-specific folder. **/
 	function getPath(name: KnownPath): Promise<String>;
